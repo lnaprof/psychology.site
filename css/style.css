@@ -508,7 +508,9 @@ h1, h2, h3, h4 { margin: 0; font-family: var(--font-head); line-height: 1.18; le
 
 @media (max-width: 860px) {
   .hero-inner { grid-template-columns: 1fr; gap: 40px; }
-  .hero-media { order: -1; max-width: 480px; }
+  /* На мобильных/планшетах, где герой перестраивается в одну колонку и не
+     выглядит как на десктопе, фото первого экрана скрываем */
+  .hero-media { display: none; }
   .about-grid { grid-template-columns: 1fr; }
   .about-media { position: static; max-width: 480px; }
   /* Заголовок «О специалисте» на мобильных может переноситься */
