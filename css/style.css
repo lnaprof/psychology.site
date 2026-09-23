@@ -441,6 +441,8 @@ h1, h2, h3, h4 { margin: 0; font-family: var(--font-head); line-height: 1.18; le
 .footer-nav a { color: rgba(255, 255, 255, .72); font-size: 14.5px; }
 .footer-nav a:hover { color: #fff; }
 .footer-legal p { margin: 0 0 8px; font-size: 13px; color: rgba(255, 255, 255, .48); }
+.footer-copyright { color: rgba(255, 255, 255, .72); }
+.footer-rights { font-size: 11px; line-height: 1.55; color: rgba(255, 255, 255, .45); }
 
 /* ---------- Мобильная CTA-плашка ---------- */
 .mobile-cta {
