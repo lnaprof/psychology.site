@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ✏️ ЗАМЕНИТЕ: title, description, canonical, OG — под реальное имя и домен -->
+  <title>Анна Соколова — КПТ-терапевт и ICF-коуч | Онлайн-терапия с измеримым результатом</title>
+  <meta name="description" content="Доказательная психология (КПТ, ACT) и коучинг для IT-специалистов и руководителей. 8-недельная программа: переводим тревожность, сон и прокрастинацию в метрики — GAD-7, трекеры сна, поведенческие показатели. Запись на бесплатную 20-минутную диагностику.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#F4F1EC">
+  <link rel="canonical" href="https://example.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Анна Соколова — КПТ-терапевт и ICF-коуч">
+  <meta property="og:description" content="Верни себе 10 часов энергии в неделю и перестань откладывать решения. 8-недельная программа на стыке КПТ и коучинга — с замером прогресса в цифрах.">
+  <meta property="og:url" content="https://example.com/">
+  <meta property="og:image" content="https://example.com/img/expert-hero.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231F4A66'/%3E%3Ctext x='32' y='43' font-family='Arial, sans-serif' font-size='30' font-weight='700' fill='%23ffffff' text-anchor='middle'%3E%D0%90%3C/text%3E%3C/svg%3E">
+
+  <!-- Шрифты: Manrope (заголовки) + Inter (текст), display=swap — не блокируют рендер -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- JS-флаг: скрытие .reveal-блоков включается только при работающем JS
+       (без JS контент виден сразу — прогрессивное улучшение) -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Структурированные данные: ProfessionalService -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Анна Соколова — КПТ-терапевт и ICF-коуч",
+    "description": "Доказательная психология (КПТ, ACT, CBT-I) и коучинг (GROW, CLEAR) с измерением прогресса: шкалы GAD-7, MBI, данные трекеров сна.",
+    "url": "https://example.com/",
+    "telephone": "+7 (XXX) XXX-XX-XX",
+    "email": "name@example.com",
+    "image": "https://example.com/img/expert-hero.jpg",
+    "priceRange": "₽₽",
+    "areaServed": "RU",
+    "knowsAbout": ["Когнитивно-поведенческая терапия", "КПТ", "ACT", "Коучинг", "Выгорание", "Прокрастинация", "Тревожность", "Нарушения сна"],
+    "makesOffer": [
+      { "@type": "Offer", "name": "Разовая сессия «Точка А»", "price": "7000", "priceCurrency": "RUB" },
+      { "@type": "Offer", "name": "Спринт 4 недели", "price": "55000", "priceCurrency": "RUB" },
+      { "@type": "Offer", "name": "Система 8 недель", "price": "98000", "priceCurrency": "RUB" }
+    ]
+  }
+  </script>
+
+  <!-- Структурированные данные: FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "А если мне нужно просто выговориться?", "acceptedAnswer": { "@type": "Answer", "text": "Для этого есть друзья или формат разовых консультаций. Мы будем работать над изменением поведения и мыслительных паттернов. Если на 3-й сессии поймем, что вам нужен клинический психиатр для подбора медикаментов, я дам направление к проверенному врачу и верну деньги за оставшиеся сессии пакета." } },
+      { "@type": "Question", "name": "Сколько сессий мне понадобится?", "acceptedAnswer": { "@type": "Answer", "text": "Средний срок решения конкретной проблемы (тревожность, прокрастинация, конфликт) — 4–6 сессий. Глубинные изменения паттернов привязанности и самоидентификации занимают от 6 месяцев. На бесплатной диагностике мы точно определим ваш трек и я назову реалистичные сроки на основе своей статистики по похожим запросам." } },
+      { "@type": "Question", "name": "Что будет на бесплатной диагностике?", "acceptedAnswer": { "@type": "Answer", "text": "20 минут в Zoom. Вы расскажете о своем запросе, я задам 3–4 уточняющих вопроса и скажу: смогу ли я помочь, сколько сессий это займет по моей статистике, какой тариф подходит. Если я пойму, что ваш запрос вне моей компетенции, скажу об этом прямо и порекомендую коллегу." } },
+      { "@type": "Question", "name": "А вдруг мне не подойдет ваш подход?", "acceptedAnswer": { "@type": "Answer", "text": "Такое бывает примерно в 5% случаев. Если после первой полноценной сессии вы поймете, что мы «не сходимся» или формат не дает результата, я верну 100% стоимости." } },
+      { "@type": "Question", "name": "Как проходят сессии технически?", "acceptedAnswer": { "@type": "Answer", "text": "Zoom, 60 минут, камера включена с обеих сторон. После каждой сессии в течение 2 часов вы получаете в мессенджере краткое резюме: что обсудили, какое домашнее задание, дедлайн. Между сессиями в тарифах «Спринт» и «Система» мне можно писать — отвечаю в течение 12 часов в рабочие дни." } },
+      { "@type": "Question", "name": "Это конфиденциально?", "acceptedAnswer": { "@type": "Answer", "text": "Да. Я соблюдаю этический кодекс ICF и не передаю данные третьим лицам. Сессии не записываются (если вы сами не попросите записать для себя). Все замеры и дневники хранятся в трекере в зашифрованном виде, доступ к которому будет только у вас и у меня." } }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+
+  <!-- ======================= ШАПКА ======================= -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#hero" aria-label="Анна Соколова — на первый экран">
+        <span class="brand-mark" aria-hidden="true">АС</span>
+        <span class="brand-text">Анна Соколова*<small>КПТ-терапевт · ICF-коуч</small></span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
+        <ul class="nav-list">
+          <li><a href="#about">Обо мне</a></li>
+          <li><a href="#requests">С чем работаю</a></li>
+          <li><a href="#formats">Форматы</a></li>
+          <li><a href="#reviews">Отзывы</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Контакты</a></li>
+        </ul>
+        <a class="btn btn--primary btn--sm nav-cta" href="#contact">Записаться</a>
+      </nav>
+
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ======================= 1. ПЕРВЫЙ ЭКРАН ======================= -->
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow reveal">Доказательная психология и коучинг для тех, кто мыслит цифрами</p>
+
+          <h1 id="hero-title" class="hero-title reveal" data-delay="60">Верни себе <span class="accent-word">10 часов энергии</span> в неделю и перестань откладывать решения</h1>
+
+          <p class="hero-sub reveal" data-delay="120">8-недельная программа на стыке когнитивно-поведенческой терапии и коучинга. Переводим абстрактные запросы в метрики: качество сна, уровень фокуса, скорость принятия решений.</p>
+
+          <div class="hero-actions reveal" data-delay="180">
+            <a class="btn btn--primary btn--lg" href="#contact">Записаться на бесплатную 20-минутную диагностику</a>
+          </div>
+
+          <p class="micro reveal" data-delay="220">Оставь заявку — в ответ отправлю гайд «Алгоритм снижения кортизола за 15 минут до сна»</p>
+        </div>
+
+        <figure class="hero-media reveal" data-delay="150">
+          <img class="hero-photo" src="img/expert-hero.jpg" alt="Анна Соколова за рабочим столом с ноутбуком" width="535" height="949" fetchpriority="high">
+          <figcaption class="disclaimer-note">* Имена и фотографии в этом блоке — собирательные образы. Мы изменили персональные данные, чтобы сохранить конфиденциальность клиентов. Любые совпадения с реальными людьми случайны.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ======================= 2. О СПЕЦИАЛИСТЕ ======================= -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about-grid">
+          <figure class="about-media reveal">
+            <img src="img/expert-about.jpg" alt="Анна Соколова — КПТ-терапевт, ICF-коуч" width="512" height="1024" loading="lazy">
+            <figcaption class="disclaimer-note">* Имена и фотографии в этом блоке — собирательные образы. Мы изменили персональные данные, чтобы сохранить конфиденциальность клиентов. Любые совпадения с реальными людьми случайны.</figcaption>
+          </figure>
+
+          <div class="about-copy">
+            <p class="eyebrow reveal">О специалисте</p>
+            <h2 id="about-title" class="h2 reveal" data-delay="60">Анна Соколова* — <span class="accent-word">КПТ-терапевт, ICF-коуч</span></h2>
+
+            <p class="lead reveal" data-delay="120">Я работаю с людьми с аналитическим складом ума, которые застряли в паттернах и обычная логика тут не поможет. Мой подход: берем только методы с доказанной эффективностью, замеряем прогресс в цифрах и не растягиваем работу на годы.</p>
+
+            <dl class="facts reveal" data-delay="180">
+              <div class="fact">
+                <dt class="fact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </dt>
+                <dd class="fact-body">
+                  <span class="fact-value"><span class="counter" data-target="4700">0</span>+ часов</span>
+                  <span class="fact-label">личной практики (на сентябрь 2026)</span>
+                </dd>
+              </div>
+              <div class="fact">
+                <dt class="fact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                </dt>
+                <dd class="fact-body">
+                  <span class="fact-value">6 сессий</span>
+                  <span class="fact-label">средний срок работы с запросом «выгорание / прокрастинация»</span>
+                </dd>
+              </div>
+              <div class="fact">
+                <dt class="fact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                </dt>
+                <dd class="fact-body">
+                  <span class="fact-value">Сертификация КПТ</span>
+                  <span class="fact-label">Институт Бека, 2021</span>
+                </dd>
+              </div>
+              <div class="fact">
+                <dt class="fact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </dt>
+                <dd class="fact-body">
+                  <span class="fact-value">Коучинговая аккредитация</span>
+                  <span class="fact-label">ICF Certified Coach (ACC)</span>
+                </dd>
+              </div>
+            </dl>
+
+            <div class="fact fact--warn reveal" data-delay="240">
+              <div class="fact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+              </div>
+              <div class="fact-body">
+                <span class="fact-value">С чем не работаю</span>
+                <span class="fact-label">Клиническая депрессия, РПП — в этих случаях даю направление к профильному психиатру и работаю с ним в связке</span>
+              </div>
+            </div>
+
+            <blockquote class="quote reveal" data-delay="300">
+              <p>«Я не обещаю, что после одной сессии вы "обретете гармонию с собой". Я обещаю, что через 4 недели вы будете спать крепче и на 1,5 часа дольше. Вы перестанете проверять почту после 23:00 — и у нас будут цифры, которые это подтвердят.»</p>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= 3. ЗАПРОСЫ ======================= -->
+    <section class="section section--alt" id="requests" aria-labelledby="requests-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow reveal">Запросы</p>
+          <h2 id="requests-title" class="h2 reveal" data-delay="60">С чем ко мне приходят</h2>
+          <p class="section-sub reveal" data-delay="120">Если ваш запрос в этом списке, на диагностике мы определим, сколько сессий потребуется по моей статистике. Если запроса здесь нет — напишите мне напрямую, и я честно скажу, смогу ли помочь.</p>
+        </div>
+
+        <ul class="cards-grid" role="list">
+          <li class="request-card reveal">
+            <span class="icon-tile" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="18" height="12" rx="2"/><line x1="23" y1="10" x2="23" y2="14"/><path d="M5.5 10.5h4v3h-4z"/></svg>
+            </span>
+            <h3 class="h3">Выгорание и хроническая усталость</h3>
+            <p>Вы спите 7–8 часов, но просыпаетесь уставшим. К 15:00 батарея на нуле, а впереди еще 4 часа рабочих созвонов и встреч.</p>
+            <p class="request-result"><strong>Средний результат:</strong> +2 часа продуктивной энергии в день и восстановление режима за 6 сессий.</p>
+          </li>
+
+          <li class="request-card reveal">
+            <span class="icon-tile" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12"/><path d="M6 21h12"/><path d="M7 3Q12.5 9.5 12 12Q11.5 14.5 7 21"/><path d="M17 3Q11.5 9.5 12 12Q12.5 14.5 17 21"/></svg>
+            </span>
+            <h3 class="h3">Прокрастинация важных решений</h3>
+            <p>Вы месяцами откладываете увольнение, запуск проекта или сложный разговор. Не из-за лени — это перегрузка префронтальной коры микрорешениями.</p>
+            <p class="request-result"><strong>Средний результат:</strong> первое действие в течение 72 часов после 2-й сессии.</p>
+          </li>
+
+          <li class="request-card reveal">
+            <span class="icon-tile" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/><polyline points="16.2 12.8 13.6 12.8 12 9.8 10.4 12.8 7.8 12.8"/></svg>
+            </span>
+            <h3 class="h3">Тревожность и панические атаки</h3>
+            <p>Сердцебиение перед созвонами, ком в горле перед выступлениями, ночные «прокручивания» сценариев. Вы не можете делегировать, потому что «никто не сделает нормально».</p>
+            <p class="request-result"><strong>Средний результат:</strong> используем протоколы ACT и экспозиционную терапию. Снижение баллов по шкале GAD-7 — в среднем на 40% за 8 недель.</p>
+          </li>
+
+          <li class="request-card reveal">
+            <span class="icon-tile" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13c0-4 3.6-7 8-7s8 3 8 7c0 2.6-1.4 4.7-3.6 5.9-.7-1-1.5-1.4-2.9-1.4h-3c-1.4 0-2.2.4-2.9 1.4C5.4 17.7 4 15.6 4 13z"/><circle cx="9.4" cy="12.6" r="1.2"/><circle cx="14.6" cy="12.6" r="1.2"/><path d="M10.6 15.6c.8.7 2 .7 2.8 0"/></svg>
+            </span>
+            <h3 class="h3">Синдром самозванца</h3>
+            <p>Вы экспертны и зарабатываете выше рынка, но внутри уверены, что «скоро все поймут, что я некомпетентен».</p>
+            <p class="request-result"><strong>Средний результат:</strong> работаем с убеждениями через технику когнитивной реструктуризации. Клиент берет на себя проект, который раньше избегал, в течение 4–6 недель.</p>
+          </li>
+
+          <li class="request-card reveal">
+            <span class="icon-tile" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </span>
+            <h3 class="h3">Нарушения сна на фоне стресса</h3>
+            <p>Вы засыпаете в середине ночи, прокручивая рабочие сценарии. Трекеры показывают 45 минут глубокого сна вместо положенных 90.</p>
+            <p class="request-result"><strong>Средний результат:</strong> засыпание за 15–20 минут через 3 недели работы с протоколом CBT-I.</p>
+          </li>
+
+          <li class="request-card reveal">
+            <span class="icon-tile" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+            </span>
+            <h3 class="h3">Конфликты и трудности с границами</h3>
+            <p>Вы соглашаетесь на правки в 22:00, берете чужие задачи и не можете сказать «нет» без чувства вины.</p>
+            <p class="request-result"><strong>Средний результат:</strong> 3 отработанных отказа за 4 недели без разрушения отношений. За 6 сессий выстраиваем алгоритм экологичного отстаивания границ для рабочих и семейных ситуаций.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ======================= 4. ПРЕИМУЩЕСТВА ======================= -->
+    <section class="section" id="approach" aria-labelledby="approach-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow reveal">Преимущества</p>
+          <h2 id="approach-title" class="h2 reveal" data-delay="60">Почему этот формат про результат, а не про «становится легче на час»</h2>
+        </div>
+
+        <ol class="benefits-grid" role="list">
+          <li class="benefit-card reveal">
+            <span class="benefit-num" aria-hidden="true">01</span>
+            <span class="benefit-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </span>
+            <h3 class="h3">Метрики вместо «мне кажется, стало лучше»</h3>
+            <p>На старте и финише замеряем тревожность по валидированной шкале GAD-7, выгорание по MBI, качество сна через синхронизацию с трекером. Вы видите прогресс в цифрах, а не на словах.</p>
+          </li>
+
+          <li class="benefit-card reveal">
+            <span class="benefit-num" aria-hidden="true">02</span>
+            <span class="benefit-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </span>
+            <h3 class="h3">Спринты по 2 недели, а не годы на кушетке</h3>
+            <ul class="benefit-list">
+              <li>Ставим конкретную цель на 14 дней</li>
+              <li>Достигаем</li>
+              <li>Фиксируем результат</li>
+              <li>Берем новый запрос</li>
+            </ul>
+            <p class="benefit-note">Средний клиент закрывает основной запрос за 4–6 сессий, а не за 2 года.</p>
+          </li>
+
+          <li class="benefit-card reveal">
+            <span class="benefit-num" aria-hidden="true">03</span>
+            <span class="benefit-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </span>
+            <h3 class="h3">Домашние задания с дедлайнами и шаблонами</h3>
+            <p>После каждой сессии вы получаете рабочий алгоритм. Например: «В течение 3 дней внедрить технику "Стоп-кадр" при триггере на критику и зафиксировать результат в CBT-дневнике».</p>
+          </li>
+
+          <li class="benefit-card reveal">
+            <span class="benefit-num" aria-hidden="true">04</span>
+            <span class="benefit-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </span>
+            <h3 class="h3">Только методы с доказанной эффективностью</h3>
+            <p>КПТ, ACT-терапия, протокол CBT-I для бессонницы, коучинговые модели GROW и CLEAR. Никаких расстановок, «работы с родом» и «энергетических практик». Если метод не подтвержден мета-анализами — я его не использую.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ======================= 5. УСЛУГИ И ФОРМАТЫ ======================= -->
+    <section class="section section--alt" id="formats" aria-labelledby="formats-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow reveal">Услуги и форматы</p>
+          <h2 id="formats-title" class="h2 reveal" data-delay="60">Выберите тариф, который закроет вашу задачу</h2>
+          <p class="section-sub reveal" data-delay="120">Все сессии проходят в Zoom. Длительность — 60 минут. Если после первой сессии вы поймете, что формат не подходит, — возвращаю 100% стоимости. Без бюрократии.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="price-card reveal">
+            <h3 class="price-card-title">«Точка А» — разовая сессия</h3>
+            <p class="price-card-desc">Для тех, кому нужен взгляд со стороны и конкретный план действий по одной ситуации.</p>
+            <ul class="price-list" role="list">
+              <li>1 сессия, 60 минут, Zoom</li>
+              <li>Разбор текущей тупиковой ситуации</li>
+              <li>3 конкретных шага для выхода из кризиса, которые вы можете применить в течение 48 часов</li>
+              <li>Краткое письменное резюме после сессии в удобном мессенджере</li>
+            </ul>
+            <p class="price"><span class="price-value">7 000 ₽</span></p>
+            <button class="btn btn--ghost btn--block" type="button" data-plan="Точка А — разовая сессия">Записаться</button>
+          </article>
+
+          <article class="price-card price-card--featured reveal" data-delay="80">
+            <span class="badge" aria-hidden="true">Рекомендуемый</span>
+            <h3 class="price-card-title">«Спринт» — 4 недели</h3>
+            <p class="price-card-desc">Для работы с одной конкретной проблемой: страх публичных выступлений, конфликт с партнером, решение о смене работы, прокрастинация конкретного проекта.</p>
+            <ul class="price-list" role="list">
+              <li>4 сессии по 60 минут (1 раз в неделю)</li>
+              <li>Рабочие тетради и шаблоны: CBT-дневники, матрицы принятия решений, протоколы работы с тревожными мыслями</li>
+              <li>Поддержка в мессенджере между сессиями (ответ в течение 12 часов в рабочие дни)</li>
+              <li>Замер метрик на старте и на 4-й неделе</li>
+              <li>Письменный отчет с динамикой по итогам</li>
+            </ul>
+            <p class="price"><span class="price-value">55 000 ₽</span></p>
+            <button class="btn btn--light btn--block" type="button" data-plan="Спринт — 4 недели">Записаться</button>
+          </article>
+
+          <article class="price-card reveal" data-delay="160">
+            <h3 class="price-card-title">«Система» — 8 недель</h3>
+            <p class="price-card-desc">Для глубокой перенастройки рабочих привычек, борьбы с выгоранием и системной работы над паттернами поведения.</p>
+            <ul class="price-list" role="list">
+              <li>8 сессий по 60 минут (1 раз в неделю)</li>
+              <li>Ежедневное ведение привычек и когнитивных искажений через шаблон в трекере</li>
+              <li>Доступ к закрытой базе: аналитические шаблоны, 12 аудио-практик (от 5 до 15 минут)</li>
+              <li>Промежуточная диагностика метрик на 4-й неделе с корректировкой плана</li>
+              <li>Финальный отчет с динамикой по всем замерам</li>
+              <li>Гарантия результата: если к концу 8-й недели вы не увидите измеримого прогресса по agreed-метрикам — возвращаю стоимость последнего месяца</li>
+            </ul>
+            <p class="price"><span class="price-value">98 000 ₽</span></p>
+            <button class="btn btn--ghost btn--block" type="button" data-plan="Система — 8 недель">Записаться</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= 6. ОТЗЫВЫ ======================= -->
+    <section class="section" id="reviews" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow reveal">Отзывы</p>
+          <h2 id="reviews-title" class="h2 reveal" data-delay="60">Что говорят те, кто уже прошел программу</h2>
+        </div>
+
+        <div class="reviews-grid">
+          <article class="review-card reveal">
+            <header class="review-head">
+              <span class="avatar" aria-hidden="true">А</span>
+              <div>
+                <p class="review-name">Алексей, 38 лет</p>
+                <p class="review-role">IT-директор</p>
+              </div>
+            </header>
+            <blockquote class="review-text">
+              <p>«Я пришел с выгоранием и бессонницей. Трекер показывал 3 часа сна, из которых глубокого — 20 минут. Через 8 недель сон стал 7 часов, я делегировал треть своих рутинных задач команде, а балл по опроснику выгорания MBI упал с 34 до 12. Впервые за два года уехал в отпуск без ноутбука!»</p>
+            </blockquote>
+          </article>
+
+          <article class="review-card reveal" data-delay="80">
+            <header class="review-head">
+              <span class="avatar" aria-hidden="true">М</span>
+              <div>
+                <p class="review-name">Марина, 31 год</p>
+                <p class="review-role">Индивидуальный предприниматель</p>
+              </div>
+            </header>
+            <blockquote class="review-text">
+              <p>«Полгода ходила к психологу, который спрашивал "а что вы чувствуете?". Инсайты были, но я все равно проверяла каждый макет по 2 часа и боялась запустить новый проект. Здесь за 1,5 месяца я получила дневник когнитивных искажений, технику "достаточно хорошо" с чек-листом, а еще запустила 2 новых направления и перестала править чужую работу до мелочей.»</p>
+            </blockquote>
+          </article>
+
+          <article class="review-card reveal" data-delay="160">
+            <header class="review-head">
+              <span class="avatar" aria-hidden="true">Д</span>
+              <div>
+                <p class="review-name">Дмитрий, 29 лет</p>
+                <p class="review-role">Тимлид в финтехе</p>
+              </div>
+            </header>
+            <blockquote class="review-text">
+              <p>«Меня трясло перед каждым выступлением на 50+ человек. После 4 сессий и экспозиционной практики я участвовал в конференции на 300 человек и даже получил удовольствие. Шкала тревоги перед публичными выступлениями упала с 9 до 3 из 10.»</p>
+            </blockquote>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= 7. FAQ ======================= -->
+    <section class="section section--alt" id="faq" aria-labelledby="faq-title">
+      <div class="container container--narrow">
+        <div class="section-head">
+          <p class="eyebrow reveal">FAQ</p>
+          <h2 id="faq-title" class="h2 reveal" data-delay="60">Частые вопросы</h2>
+        </div>
+
+        <div class="faq-list reveal" data-delay="120">
+          <div class="faq-item">
+            <h3 class="faq-q">
+              <button type="button" id="faq-b-1" aria-expanded="false" aria-controls="faq-a-1">
+                <span>А если мне нужно просто выговориться?</span>
+                <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+              </button>
+            </h3>
+            <div class="faq-a" id="faq-a-1" role="region" aria-labelledby="faq-b-1">
+              <div class="faq-a-inner">
+                <p>Для этого есть друзья или формат разовых консультаций. Мы будем работать над изменением поведения и мыслительных паттернов. Если на 3-й сессии поймем, что вам нужен клинический психиатр для подбора медикаментов, я дам направление к проверенному врачу и верну деньги за оставшиеся сессии пакета.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-q">
+              <button type="button" id="faq-b-2" aria-expanded="false" aria-controls="faq-a-2">
+                <span>Сколько сессий мне понадобится?</span>
+                <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+              </button>
+            </h3>
+            <div class="faq-a" id="faq-a-2" role="region" aria-labelledby="faq-b-2">
+              <div class="faq-a-inner">
+                <p>Средний срок решения конкретной проблемы (тревожность, прокрастинация, конфликт) — 4–6 сессий. Глубинные изменения паттернов привязанности и самоидентификации занимают от 6 месяцев. На бесплатной диагностике мы точно определим ваш трек и я назову реалистичные сроки на основе своей статистики по похожим запросам.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-q">
+              <button type="button" id="faq-b-3" aria-expanded="false" aria-controls="faq-a-3">
+                <span>Что будет на бесплатной диагностике?</span>
+                <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+              </button>
+            </h3>
+            <div class="faq-a" id="faq-a-3" role="region" aria-labelledby="faq-b-3">
+              <div class="faq-a-inner faq-a-inner--list">
+                <p>20 минут в Zoom. Вы расскажете о своем запросе, я задам 3–4 уточняющих вопроса и скажу:</p>
+                <ul>
+                  <li>смогу ли я помочь,</li>
+                  <li>сколько сессий это займет по моей статистике,</li>
+                  <li>какой тариф подходит.</li>
+                </ul>
+                <p>Если я пойму, что ваш запрос вне моей компетенции, скажу об этом прямо и порекомендую коллегу.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-q">
+              <button type="button" id="faq-b-4" aria-expanded="false" aria-controls="faq-a-4">
+                <span>А вдруг мне не подойдет ваш подход?</span>
+                <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+              </button>
+            </h3>
+            <div class="faq-a" id="faq-a-4" role="region" aria-labelledby="faq-b-4">
+              <div class="faq-a-inner">
+                <p>Такое бывает примерно в 5% случаев. Если после первой полноценной сессии вы поймете, что мы «не сходимся» или формат не дает результата, я верну 100% стоимости.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-q">
+              <button type="button" id="faq-b-5" aria-expanded="false" aria-controls="faq-a-5">
+                <span>Как проходят сессии технически?</span>
+                <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+              </button>
+            </h3>
+            <div class="faq-a" id="faq-a-5" role="region" aria-labelledby="faq-b-5">
+              <div class="faq-a-inner">
+                <p>Zoom, 60 минут, камера включена с обеих сторон. После каждой сессии в течение 2 часов вы получаете в мессенджере краткое резюме: что обсудили, какое домашнее задание, дедлайн. Между сессиями в тарифах «Спринт» и «Система» мне можно писать — отвечаю в течение 12 часов в рабочие дни.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-q">
+              <button type="button" id="faq-b-6" aria-expanded="false" aria-controls="faq-a-6">
+                <span>Это конфиденциально?</span>
+                <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+              </button>
+            </h3>
+            <div class="faq-a" id="faq-a-6" role="region" aria-labelledby="faq-b-6">
+              <div class="faq-a-inner">
+                <p>Да. Я соблюдаю этический кодекс ICF и не передаю данные третьим лицам. Сессии не записываются (если вы сами не попросите записать для себя). Все замеры и дневники хранятся в трекере в зашифрованном виде, доступ к которому будет только у вас и у меня.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= 8. КОНТАКТЫ И ФОРМА ======================= -->
+    <section class="section section--contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-copy">
+            <p class="eyebrow reveal">Запись</p>
+            <h2 id="contact-title" class="h2 reveal" data-delay="60">Запишитесь на 20-минутную диагностику. <span class="accent-word">Это бесплатно.</span></h2>
+            <p class="lead reveal" data-delay="120">Мы определим вашу текущую точку «А», я скажу, смогу ли помочь с вашим запросом, и сколько сессий на это потребуется. Если не смогу — дам направление к нужному специалисту.</p>
+
+            <div class="contact-side reveal" data-delay="180">
+              <h3 class="h3">Если удобнее написать напрямую</h3>
+              <ul class="contact-list" role="list">
+                <li>
+                  <a href="https://t.me/username" target="_blank" rel="noopener">
+                    <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></span>
+                    Telegram: @username
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:name@example.com">
+                    <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></svg></span>
+                    Email: name@example.com
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:+7XXXXXXXXXX">
+                    <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+                    Телефон: +7 (XXX) XXX-XX-XX <small>(только сообщения)</small>
+                  </a>
+                </li>
+              </ul>
+
+              <p class="hours">Часы работы: <strong>Пн–Пт, 10:00–19:00 МСК.</strong> Сессии провожу с 10:00 до 20:00 МСК.</p>
+            </div>
+          </div>
+
+          <div class="form-card reveal" data-delay="120">
+            <script src="https://forms.yandex.ru/_static/embed.js"></script>
+            <iframe src="https://forms.yandex.ru/cloud/6ab3f55be010db0855889fbd?iframe=1" frameborder="0" name="ya-form-6ab3f55be010db0855889fbd" width="650" title="Форма записи на диагностику"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================= ПОДВАЛ ======================= -->
+  <footer class="site-footer" id="policy">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-text">Анна Соколова*<small>КПТ-терапевт · ICF-коуч</small></span>
+        <p class="footer-note">Записи на 20-минутную диагностику — без обязательств. Если не смогу помочь с запросом — честно скажу и порекомендую коллегу.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Навигация в подвале">
+        <a href="#about">Обо мне</a>
+        <a href="#requests">С чем работаю</a>
+        <a href="#formats">Форматы</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Запись</a>
+      </nav>
+      <div class="footer-legal">
+        <p>© <span id="year">2026</span> Анна Соколова*. Все права защищены.</p>
+        <p>Политика конфиденциальности: данные, отправленные через форму, используются только для связи по вашему запросу и не передаются третьим лицам.</p>
+      </div>
+    </div>
+    <p class="footer-disclaimer">* Все имена, фотографии и личные детали в отзывах и кейсах на этом сайте являются собирательными образами, созданными для иллюстрации реальных результатов работы. Любые совпадения с реальными людьми случайны.</p>
+  </footer>
+
+  <!-- Мобильная плашка CTA: появляется после первого экрана -->
+  <div class="mobile-cta" id="mobile-cta">
+    <a class="btn btn--primary btn--block" href="#contact">Записаться на диагностику</a>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
