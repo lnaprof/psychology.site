@@ -453,10 +453,6 @@ h1, h2, h3, h4 { margin: 0; font-family: var(--font-head); line-height: 1.18; le
   text-align: center;
   color: rgba(255, 255, 255, .52);
 }
-/* На мобильных не даём фиксированной CTA-плашке перекрыть последнюю строку подвала */
-@media (max-width: 768px) {
-  .site-footer { padding-bottom: calc(clamp(40px, 8vw, 64px) + 76px); }
-}
 
 /* ---------- Мобильная CTA-плашка ---------- */
 .mobile-cta {
