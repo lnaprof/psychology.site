@@ -442,11 +442,20 @@ h1, h2, h3, h4 { margin: 0; font-family: var(--font-head); line-height: 1.18; le
 .footer-nav a:hover { color: #fff; }
 .footer-legal p { margin: 0 0 8px; font-size: 13px; color: rgba(255, 255, 255, .48); }
 .footer-copyright { color: rgba(255, 255, 255, .72); }
-/* Строка о правообладателе: под дисклеймером, самым мелким шрифтом, по центру */
+/* Строка о правообладателе: под дисклеймером, мелкий шрифт, по центру */
 .footer-rights {
-  margin: clamp(14px, 2vw, 20px) 0 0;
-  font-size: 10px; line-height: 1.6; text-align: center;
-  color: rgba(255, 255, 255, .38);
+  display: block;
+  max-width: 720px;
+  margin: clamp(16px, 2vw, 22px) auto 0;
+  padding: 0 24px max(10px, env(safe-area-inset-bottom));
+  font-size: 10.5px;
+  line-height: 1.65;
+  text-align: center;
+  color: rgba(255, 255, 255, .52);
+}
+/* На мобильных не даём фиксированной CTA-плашке перекрыть последнюю строку подвала */
+@media (max-width: 768px) {
+  .site-footer { padding-bottom: calc(clamp(40px, 8vw, 64px) + 76px); }
 }
 
 /* ---------- Мобильная CTA-плашка ---------- */
