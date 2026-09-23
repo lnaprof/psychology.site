@@ -278,12 +278,30 @@
      ======================================================================== */
   var mobileCta = $('#mobile-cta');
   var hero = $('.hero');
-  if (mobileCta && hero && 'IntersectionObserver' in window) {
-    new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        mobileCta.classList.toggle('is-visible', !entry.isIntersecting);
-      });
-    }, { threshold: 0.05 }).observe(hero);
+  var formSection = $('#contact');
+  if (mobileCta && 'IntersectionObserver' in window) {
+    var heroVisible = true;
+    var formReached = false;
+
+    function syncCta() {
+      /* Плашка видна только после первого экрана и пока не начался блок с формой
+         (как только форма на экране — кнопка пропадает и больше не возвращается) */
+      mobileCta.classList.toggle('is-visible', !heroVisible && !formReached);
+    }
+
+    if (hero) {
+      new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) { heroVisible = entry.isIntersecting; syncCta(); });
+      }, { threshold: 0.05 }).observe(hero);
+    }
+
+    if (formSection) {
+      new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) { formReached = true; syncCta(); }
+        });
+      }, { threshold: 0.05 }).observe(formSection);
+    }
   }
 
   /* ========================================================================
